@@ -1,13 +1,58 @@
 \documentclass[presentation]{beamer}
 \usetheme{EPCC}
+
+\usepackage{cleveref}
+\usepackage[textfont={tiny},labelformat={empty},justification=centering]{caption}
+
 \author{Oliver Thomson Brown\thanks{o.brown@epcc.ed.ac.uk} (EPCC)}
 \date{11th September 2018}
 \title{Software Carpentry \\ Version Control with Git}
+
 \begin{document}
 
 \maketitle
 
 \section{A brief history}
+\begin{frame}{What is git?}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{itemize}
+				\item Git is a \emph{version control system}
+				\item Named after its creator, Linus Torvalds
+				\item Very efficient for complicated reasons that I neither understand, nor care about
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=0.5\linewidth]{LinuxCon_Europe_Linus_Torvalds_03_(cropped)}
+				\caption{\label{fig:0-1}Linus Torvalds. \textcopyright Krd, Von Sprat / Wikimedia Commons / \href{https://creativecommons.org/licenses/by-sa/4.0/}{CC-BY-SA-4.0} }
+			\end{figure}		
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{What is git not?}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{itemize}
+				\item \href{https://github.com/}{GitHub}
+				\item \href{https://www.dropbox.com/}{Dropbox}
+				\item The only version control system
+				\item Particularly user-friendly
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=0.8\linewidth]{Octocat}
+				\caption{\label{fig:0-2}Octocat. \textcopyright 2018 GitHub, Inc}
+			\end{figure}		
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\section{Set-up}
 
 \section{Creating a repository}
 
