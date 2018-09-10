@@ -1,6 +1,7 @@
 \documentclass[presentation]{beamer}
 \usetheme{EPCC}
 
+\usepackage{listings}
 \usepackage{cleveref}
 \usepackage[textfont={tiny},labelformat={empty},justification=centering]{caption}
 
@@ -18,6 +19,7 @@
 		\begin{column}{0.5\textwidth}
 			\begin{itemize}
 				\item Git is a \emph{version control system}
+				\item A way for many people to work on a single codebase in a \emph{controlled} manner
 				\item Named after its creator, Linus Torvalds
 				\item Very efficient for complicated reasons that I neither understand, nor care about
 			\end{itemize}
@@ -53,8 +55,63 @@
 \end{frame}
 
 \section{Set-up}
+\begin{frame}[fragile]{Pre-flight checks}
+\begin{lstlisting}
+git --version
+git config --global user.name "OTB"
+git config --global user.email "otb@email.com"
+\end{lstlisting}
+\hfill \\
+\hfill \\
+\begin{itemize}
+	\item These are \emph{git} settings
+	\item GitHub provides you with an anonymous email address: ``\emph{username}@users.noreply.github.com''
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Pre-flight checks}
+\begin{center}
+LINE ENDINGS \\
+(It's a whole thing...)
+\end{center}
+
+On UNIX:
+\begin{itemize}
+	\item \lstinline$git config --global core.autocrlf input$
+\end{itemize}
+
+On Windows:
+\begin{itemize}
+	\item \lstinline$git config --global core.autocrlf true$
+\end{itemize}
+\hfill \\
+\begin{center}
+TEXT EDITOR \\
+(Also a whole thing...)
+\end{center}
+
+\begin{itemize}
+	\item \lstinline$git config --global core.editor "vim"$
+\end{itemize}
+
+\end{frame}
 
 \section{Creating a repository}
+\begin{frame}{Creating a repo}
+
+	\begin{itemize}
+		\item Create a folder
+		\item \lstinline$mkdir THESIS$
+		\item What's in it?
+		\item \lstinline$ls -a$
+		\item Initialise git
+		\item \lstinline$git init$
+		\item Now what's in the directory?
+		\item \lstinline$git status$
+	\end{itemize}
+
+\end{frame}
 
 \section{Recording changes}
 
