@@ -1,0 +1,70 @@
+## GIT WORKSHOP
+## LIST OF COMMANDS
+
+## CREATE A REPOSITORY
+mkdir PlanToTakeOverTheWorld
+cd PlanToTakeOverTheWorld
+# what's in it?
+ls -aF
+# INITIALISE THE GIT
+git init
+# how about now?
+ls -aF
+# status check
+git status
+# maybe mention the separate dirs thing
+
+## TRACKING CHANGES
+vim plan.txt
+git status
+# add it to staging area
+git add plan.txt
+git status
+# commit it
+git commit -m "plan.txt: initial commit"
+# some things about commits...
+#   - good idea to have a *good* summary that's short (<50 chars)
+#   - if you forget the -m "" you'll be thrown into a text editor
+#   - remember everyone can see it: https://twitter.com/gitlost
+git status
+git log
+git log --oneline
+# ls will show nothing exciting.. git stores all its information in .git
+# modify the file
+vim plan.txt
+git status
+git diff
+git diff plan.txt
+# probably mention that a good IDE will integrate with git, and show diffs
+git commit -m"plan.txt: reworked the plan a bit"
+# but wait! it's not worked?!
+# need to git add first
+git add plan.txt
+git commit -m"plan.txt: reworked the plan a bit"
+# make a new change
+git diff
+git add plan.txt
+# what will git diff show now?
+git diff
+# by default it compares against staged not committed
+git diff --staged
+# that command will compare stage with last commit
+git commit -m "plan.txt: just changed the game"
+git log -N
+# a bit about directories
+mkdir backup-plan
+git status
+git add backup-plan
+git status
+# need to create a file within it, can create a placeholder
+touch backup-plan/.gitkeep
+git status
+vim backup-plan/details.txt
+git status
+git add backup-plan
+# whole directory has been added
+git status
+# show off stage skipping, and amend
+vim plan.txt
+git commit plan.txt -m"plan.txt: covfefe"
+git commit plan.txt --amend "plan.txt covert ferocious felines"
